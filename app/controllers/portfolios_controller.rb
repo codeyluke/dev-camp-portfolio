@@ -2,7 +2,15 @@ class PortfoliosController < ApplicationController
   before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
 
   def index
-    @portfolio_items = Portfolio.all
+    @portfolio_items = Portfolio.all.order(id: :desc)
+  end
+
+  def react
+    @react_portfolio_items = Portfolio.react
+  end
+
+  def ruby_on_rails
+    @ruby_on_rails_portfolio_item = Portfolio.ruby_on_rails_portfolio_items
   end
 
   def new

@@ -1,0 +1,10 @@
+h1 Ruby on Rails Porfolio Items
+
+p = link_to 'Portfolios', portfolios_path
+
+- @ruby_on_rails_portfolio_item.each do |portfolio_item|
+  p = link_to "#{portfolio_item.title}", portfolio_show_path(portfolio_item)
+  p = portfolio_item.subtitle
+  p = portfolio_item.body
+  = image_tag portfolio_item.thumb_image if portfolio_item.thumb_image.present?
+  

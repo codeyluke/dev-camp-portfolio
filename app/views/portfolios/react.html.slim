@@ -1,9 +1,7 @@
-h1 Porfolio Items
-p = link_to 'Create Portfolio', new_portfolio_path
-p = link_to 'React', portfolios_react_path
-p = link_to 'Ruby on Rails', portfolios_ruby_on_rails_path
+h1 React Porfolio Items
+p = link_to 'Portfolios', portfolios_path
 
-- @portfolio_items.each do |portfolio_item|
+- @react_portfolio_items.each do |portfolio_item|
   p = link_to "#{portfolio_item.title}", portfolio_show_path(portfolio_item)
   p = portfolio_item.subtitle
   p = portfolio_item.body

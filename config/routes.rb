@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
   get 'portfolio/:id/edit', to: 'portfolios#edit', as: 'portfolio_edit'
-  
+  get 'portfolios/ruby_on_rails', to: 'portfolios#ruby_on_rails', as: 'portfolios_ruby_on_rails'
+  get 'portfolios/react', to: 'portfolios#react', as: 'portfolios_react'
+
+
   resources :portfolios, except: [:show, :edit]
   resources :blogs do
     member do 
