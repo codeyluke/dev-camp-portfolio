@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   get 'portfolio/:id/edit', to: 'portfolios#edit', as: 'portfolio_edit'
   
   resources :portfolios, except: [:show, :edit]
-  resources :blogs
+  resources :blogs do
+    member do 
+      get :toggle_status
+    end
+  end
   
   root to: 'pages#home'
 end
