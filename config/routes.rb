@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
-  resources :portfolios
-  get 'pages/home'
-  get 'pages/about'
-  get 'pages/contact'
+  get 'about', to: 'pages#about'
+  get 'contact', to: 'pages#contact'
+  
+  get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
+  get 'portfolio/:id/edit', to: 'portfolios#edit', as: 'portfolio_edit'
+  
+  resources :portfolios, except: [:show, :edit]
   resources :blogs
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+  root to: 'pages#home'
 end

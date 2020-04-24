@@ -12,4 +12,6 @@ h1 Edit the portfolio item
     = f.text_area :body
   .actions = f.submit
 br
-= link_to 'Delete Porfolio', portfolio_path(@portfolio_item), method: :delete, data: { confirm: 'Are you sure?'}
+p = link_to 'Delete Porfolio', portfolio_path(@portfolio_item), method: :delete, data: { confirm: 'Are you sure?'}
+
+p = link_to 'Back to Portfolio', portfolio_show_path(@portfolio_item)
