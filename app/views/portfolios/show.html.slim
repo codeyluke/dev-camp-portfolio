@@ -4,3 +4,8 @@ p = @portfolio_item.subtitle
 p = @portfolio_item.body
 
 p = link_to 'Portfolios', portfolios_path
+
+h2 Technologies Used:
+
+- @portfolio_item.technologies.each do |t|
+  p = t.name

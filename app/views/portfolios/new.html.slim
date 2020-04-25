@@ -10,4 +10,9 @@ h1 Create a new portfolio item
   .field
     = f.label :body
     = f.text_area :body
+  
+  ul
+    = f.fields_for :technologies do |technology_form|
+      li = technology_form.label :name
+      li = technology_form.text_field :name
   .actions = f.submit
