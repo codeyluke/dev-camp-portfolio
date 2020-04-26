@@ -29,7 +29,7 @@ class PortfoliosController < ApplicationController
 
   def update
     @portfolio_item.update_attributes(portfolio_params)
-    redirect_to portfolio_path
+    redirect_to portfolio_show_path(@portfolio_item)
   end
 
   def show

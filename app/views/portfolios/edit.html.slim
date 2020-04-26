@@ -1,16 +1,6 @@
 h1 Edit the portfolio item
 
-= form_for @portfolio_item do |f|
-  .field
-    = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :subtitle
-    = f.text_area :subtitle
-  .field
-    = f.label :body
-    = f.text_area :body
-  .actions = f.submit
+= render 'form', portfolio_item: @portfolio_item
 br
 p = link_to 'Delete Porfolio', portfolio_path(@portfolio_item), method: :delete, data: { confirm: 'Are you sure?'}
 

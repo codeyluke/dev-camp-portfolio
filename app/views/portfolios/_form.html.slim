@@ -1,0 +1,16 @@
+= form_for @portfolio_item do |f|
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :subtitle
+    = f.text_area :subtitle
+  .field
+    = f.label :body
+    = f.text_area :body
+  
+  ul
+    = f.fields_for :technologies do |technology_form|
+      li = technology_form.label :name
+      li = technology_form.text_field :name
+  .actions = f.submit
