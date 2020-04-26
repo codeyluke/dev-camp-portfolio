@@ -18,5 +18,4 @@ html
     
     = yield
 
-    - if session[:source].present?
-      p Thanks for visiting from "#{session[:source]}"
+    = source_helper('application')
