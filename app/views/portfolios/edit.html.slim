@@ -1,7 +1,7 @@
-h1 Edit the portfolio item
+.container.portfolio-item
+  h1 Edit the portfolio item
+  = render 'form', portfolio_item: @portfolio_item
+  br
+  p = link_to 'Delete Porfolio', portfolio_path(@portfolio_item), method: :delete, data: { confirm: 'Are you sure?'}
 
-= render 'form', portfolio_item: @portfolio_item
-br
-p = link_to 'Delete Porfolio', portfolio_path(@portfolio_item), method: :delete, data: { confirm: 'Are you sure?'}
-
-p = link_to 'Back to Portfolio', portfolio_show_path(@portfolio_item)
+  p = link_to 'Back to Portfolio', portfolio_show_path(@portfolio_item)
