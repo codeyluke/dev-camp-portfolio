@@ -13,17 +13,9 @@ html
 
   body
     / = render 'shared/nav'
-    / = login_helper
     / = yield
     / = source_helper('blog')
-    .blog-masthead
-      .container
-        nav class="nav blog-nav"
-          a class="nav-link active" href="#" Home
-          a class="nav-link" href="#" New features
-          a class="nav-link" href="#" Press
-          a class="nav-link" href="#" New hires
-          a class="nav-link" href="#" About
+    = render 'shared/blog_nav'
 
     .blog-header
       .container
