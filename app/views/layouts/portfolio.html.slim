@@ -12,53 +12,8 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
   body
-    / = render 'shared/nav'
-    / p.notice = notice
-    / p.alert = alert
-    / = login_helper
-    
-    / = source_helper('portfolio')
-
-    
-    .collapse#navbarToggleExternalContent.bg-dark
-      .container
-        .row
-          .col-sm-8.py-4
-            h4.text-white About
-            p.text-muted Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.
-          .col-sm-4.py-4
-            h4.text-white Contact
-            ul.list-unstyled
-              li.text-white 
-                a href="#" class="text-white" Follow on Twitter
-              li.text-white
-                a href="#" class="text-white" Like on Facebook
-              li.text-white
-                a href="#" class="text-white" Email me
-    nav.navbar.navbar-dark.bg-dark
-      .container.d-flex.justify-content-between
-        a href="#" class="navbar-brand" Album
-        button.navbar-toggler type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"
-          span.navbar-toggler-icon
-
-    section.jumbotron.text-center
-      .container
-        h1.jumbotron-heading Album example
-        p.lead.text-muted S
-          | Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.
-        a href="#" class="btn btn-primary" Main call to action
-        a href="#" class="btn btn-secondary" Secondary action
-
+    = render 'shared/portfolio_nav'
+    = render 'shared/portfolio_masthead'
     = yield
-
-    footer.text-muted
-      .container
-        p.float-right
-          a href="#" Back to top
-        p Album example is &copy; Bootstrap, but please download and customize it for yourself!
-        p
-          | New to Bootstrap?
-          a href="../../" Visit the homepage 
-          | or read our
-          a href="../../getting-started/" getting
-          | started guide
+    = source_helper('portfolio')
+    = render 'shared/portfolio_footer'

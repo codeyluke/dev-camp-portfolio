@@ -1,0 +1,27 @@
+.collapse#navbarToggleExternalContent.bg-dark
+  .container
+    .row
+      .col-sm-8.py-4
+        h4.text-white About
+        p.text-muted Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.
+      .col-sm-4.py-4
+        h4.text-white Explore
+        ul.list-unstyled
+          li 
+            = link_to 'Home', root_path, class: 'text-white'
+          li
+             = link_to 'About', about_path, class: 'text-white'
+          li
+            = link_to 'Contact', contact_path, class: 'text-white'
+          li
+            = link_to 'Blog', blogs_path, class: 'text-white'
+          li
+            = link_to 'Portfolio', portfolios_path, class:'text-white'
+          li
+            = login_helper 'text-white'
+nav.navbar.navbar-dark.bg-dark
+  .container.d-flex.justify-content-between
+    a href="#" class="navbar-brand" Album
+    button.navbar-toggler type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"
+      span.navbar-toggler-icon
+
