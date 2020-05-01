@@ -1,13 +1,12 @@
-h1 = link_to "#{@portfolio_item.title}", portfolio_edit_path(@portfolio_item)
-
-p = @portfolio_item.subtitle
-p = @portfolio_item.body
-
-p = link_to 'Portfolios', portfolios_path
-
-h2 Technologies Used:
-
-- @portfolio_item.technologies.each do |t|
-  p = t.name
-
-hr
+.container
+  .row
+    .col-md-7
+      = image_tag @portfolio_item.main_image
+    .col-md-5
+      h1 = link_to "#{@portfolio_item.title}", portfolio_edit_path(@portfolio_item)
+      hr
+      em = @portfolio_item.subtitle
+      p = @portfolio_item.body
+      h2 Technologies Used:
+      - @portfolio_item.technologies.each do |t|
+        p = t.name
