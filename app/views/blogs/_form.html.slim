@@ -6,13 +6,14 @@
         - @blog.errors.full_messages.each do |message|
           li = message
 
-  .field
+  .form-group
     = f.label :title
-    = f.text_field :title
-  .field
+    = f.text_field :title, class: 'form-control'
+  .form-group
     = f.label :body
-    = f.text_area :body
-  .field 
+    = f.text_area :body, class: 'form-control', rows: 10
+  .form-group 
     = f.label :topic
     = f.select :topic_id, options_from_collection_for_select(Topic.all, 'id', 'title', @blog.topic_id),{}, {class: "form-control"}
-  .actions = f.submit
+  .form-group 
+    = f.submit 'Submit', class: 'btn btn-primary'
