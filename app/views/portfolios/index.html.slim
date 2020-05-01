@@ -1,7 +1,5 @@
-h1 Porfolio Items
-p = link_to 'Create Portfolio', new_portfolio_path if logged_in?(:site_admin)
-p = link_to 'React', portfolios_react_path
-p = link_to 'Ruby on Rails', portfolios_ruby_on_rails_path
-
-= render partial:'portfolio_item', collection: @portfolio_items
-  
+.album.text-muted
+  .container
+    = link_to 'Create Portfolio', new_portfolio_path if logged_in?(:site_admin)
+    .row
+      = render partial:'portfolio_item', collection: @portfolio_items
