@@ -1,10 +1,6 @@
 header class="masthead mb-auto border border-danger"
   div class="inner"
     h3 class="masthead-brand border border-warning" Macbook Pro
-    nav class="nav nav-masthead justify-content-center border border-success"
-      = link_to 'Home', root_path, class: "nav-link active"
-      = link_to 'About', about_path, class: 'nav-link'
-      = link_to 'Contact', contact_path, class: 'nav-link'
-      = link_to 'Blog', blogs_path, class: 'nav-link'
-      = link_to 'Portfolio', portfolios_path, class: 'nav-link'
+    nav class="nav nav-masthead justify-content-center border border-success app-nav"
+      = nav_helper 'nav-link', 'span'
       = login_helper 'nav-link'

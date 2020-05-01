@@ -7,16 +7,7 @@
       .col-sm-4.py-4
         h4.text-white Explore
         ul.list-unstyled
-          li 
-            = link_to 'Home', root_path, class: 'text-white'
-          li
-             = link_to 'About', about_path, class: 'text-white'
-          li
-            = link_to 'Contact', contact_path, class: 'text-white'
-          li
-            = link_to 'Blog', blogs_path, class: 'text-white'
-          li
-            = link_to 'Portfolio', portfolios_path, class:'text-white'
+          = nav_helper 'text-white', 'li'
           li
             = login_helper 'text-white'
 nav.navbar.navbar-dark.bg-dark
