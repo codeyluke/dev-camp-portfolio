@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   get 'portfolios/react', to: 'portfolios#react', as: 'portfolios_react'
 
 
-  resources :portfolios, except: [:show, :edit]
+  resources :portfolios, except: [:show, :edit] do
+    put :sort, on: :collection
+  end
   resources :blogs do
     member do 
       get :toggle_status
