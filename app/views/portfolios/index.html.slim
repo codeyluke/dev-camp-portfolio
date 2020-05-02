@@ -1,5 +1,5 @@
 .album.text-muted
   .container
     = link_to 'Create Portfolio', new_portfolio_path if logged_in?(:site_admin)
-    .row
+    .row.sortable
       = render partial:'portfolio_item', collection: @portfolio_items
