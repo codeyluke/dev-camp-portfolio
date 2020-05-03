@@ -11,11 +11,9 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
   body class='text-center'
-    div class="cover-container h-100 d-flex h-100 p-3 mx-auto flex-column"
-      
-        #background
-        = render 'shared/application_nav'
-        = yield
+    div class="cover-container h-100 d-flex h-100 p-3 mx-auto flex-column border border-primary"
+      = render 'shared/application_nav'
+      = yield
 
-        = render 'shared/application_footer' 
-        = source_helper('application')
+      = render 'shared/application_footer' 
+      = source_helper('application')
