@@ -1,5 +1,6 @@
 .album.text-muted
   .container
     = link_to 'Create Portfolio', new_portfolio_path if logged_in?(:site_admin)
-    .row.sortable
+    - sortable_access = current_user.present? && current_user.roles.include?(:site_admin) ? 'row sortable' : 'row'
+    div class="#{sortable_access}"
       = render partial:'portfolio_item', collection: @portfolio_items
