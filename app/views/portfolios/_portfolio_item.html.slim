@@ -1,5 +1,5 @@
 .card data-id="#{portfolio_item.id}"
-  = image_tag portfolio_item.thumb_image.to_s if portfolio_item.thumb_image.present?
+  = image_tag portfolio_img(portfolio_item.thumb_image.to_s, 'thumb')
   p.card-text 
     = link_to "#{portfolio_item.title}", portfolio_show_path(portfolio_item)
     / = portfolio_item.body
