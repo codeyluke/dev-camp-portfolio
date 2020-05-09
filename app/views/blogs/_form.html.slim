@@ -8,10 +8,10 @@
 
   .form-group
     = f.label :title
-    = f.text_field :title, class: 'form-control'
+    = f.text_field :title, class: 'form-control', placeholder: 'Title'
   .form-group
     = f.label :body
-    = f.text_area :body, class: 'form-control', rows: 10
+    = f.text_area :body, class: 'form-control', rows: 10, placeholder: 'Content'
   .form-group 
     = f.label :topic
     = f.select :topic_id, options_from_collection_for_select(Topic.all, 'id', 'title', @blog.topic_id),{}, {class: "form-control"}
