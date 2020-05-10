@@ -1,0 +1,6 @@
+- if flash[:alert]
+  = js add_gritter(flash[:alert], title: "Cookie Monster Portfolio", stick: false)
+- elsif flash[:error]
+  = js add_gritter(flash[:error], title: "Cookie Monster Portfolio", stick: false)
+- else
+  = js add_gritter(flash[:notice], title: "Cookie Monster Portfolio", stick: false)
