@@ -46,6 +46,7 @@ gem 'carrierwave', '~> 2.1'
 gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 gem 'carrierwave-aws', '~> 1.5'
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
+gem 'cocoon', '~> 1.2', '>= 1.2.14'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

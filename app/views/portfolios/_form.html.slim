@@ -20,12 +20,11 @@
         = f.label :body
         = f.text_area :body, class: 'form-control', rows: 10
     
-  ul
-    h3.text-center Technologies Used
-    = f.fields_for :technologies do |technology_form|
-      li = technology_form.label :name
-      li = technology_form.text_field :name, class: 'form-control'
-  
+  h3.text-center Technologies Used
+  = f.fields_for :technologies do |technology_form|
+    = render 'technology_fields', f: technology_form
+
+    = link_to_add_association 'Add Technology', f, :technologies
   .form-group
     = f.submit 'Submit', class: 'btn btn-primary btn-block'
     
