@@ -1,12 +1,15 @@
 .container.portfolio-container
   .row
     .col-md-7
-      = image_tag portfolio_img(@portfolio_item.main_image.to_s, 'main'), width: '100%'
+      = image_tag portfolio_img(@portfolio_item.thumb_image.to_s, 'main'), width: '100%'
     .col-md-5
-      h1 = link_to "#{@portfolio_item.title}", portfolio_edit_path(@portfolio_item)
+      h1 = "#{@portfolio_item.title}"
       hr
       em = @portfolio_item.subtitle
       p = @portfolio_item.body
       h2 Technologies Used:
       - @portfolio_item.technologies.each do |t|
         p = t.name
+      .col-md-12
+        - if logged_in?(:site_admin)
+          = link_to 'Edit item', portfolio_edit_path(@portfolio_item), class: 'btn btn-warning'
