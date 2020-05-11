@@ -2,7 +2,6 @@
   - if @blog.errors.any?
     - @blog.errors.full_messages.each do |error|
       = alert_generator error
-      / = js add_gritter(error, title: 'Cookie monster Portfolio!', sticky: false)
 
   .form-group
     = f.label :title
