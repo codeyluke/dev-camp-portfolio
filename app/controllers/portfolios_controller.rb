@@ -29,8 +29,15 @@ class PortfoliosController < ApplicationController
   end
 
   def create
-    Portfolio.create(portfolio_params)
-    redirect_to portfolios_path, notice: 'Successfully created the portfolio'
+    @portfolio_item = Portfolio.new(portfolio_params)
+
+    respond_to do |format|
+      if @portfolio_item.save
+        format.html { redirect_to portfolio_show_path(@portfolio_item), notice: 'Portfolio was successfully created.' }
+      else
+        format.html { render :new }
+      end
+    end
   end
 
   def edit
