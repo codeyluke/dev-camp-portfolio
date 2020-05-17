@@ -7,11 +7,7 @@
     strong Body:
     = @blog.body
 
-  - unless current_user.is_a? GuestUser
-    = form_for @comment, url: '#' do |f|
-      .form-group
-        = f.label :content
-        = f.text_area :content, class: 'form-control'
-      = f.submit 'Post Comment', class: 'btn btn-primary'
+  = render 'comments/comment_form'
   
-  = render @blog.comments #this will go to the view folder and look for the partial with _comment.html.slim file
+  / this will go to the view folder and look for the partial with _comment.html.slim file
+  = render @blog.comments 
