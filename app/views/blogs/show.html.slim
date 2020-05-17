@@ -10,4 +10,5 @@
   = render 'comments/comment_form'
   
   / this will go to the view folder and look for the partial with _comment.html.slim file
-  = render @blog.comments 
+  #comments data-blog-id="#{@blog.id}"
+    = render @blog.comments 
